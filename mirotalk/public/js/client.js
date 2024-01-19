@@ -2110,12 +2110,12 @@ function setTheme() {
     const theme = mirotalkTheme.value;
     switch (theme) {
         case 'dark':
-            // dark theme
-            swBg = 'radial-gradient(#393939, #000000)';
+            // dark theme with 008080
+            swBg = 'radial-gradient(#393939, #008080)';
             setSP('--body-bg', 'radial-gradient(#008080, #008080)');
             setSP('--msger-bg', 'radial-gradient(#008080, #008080)');
-            setSP('--msger-private-bg', 'radial-gradient(#008080, #000000)');
-            setSP('--wb-bg', 'radial-gradient(#008080, #000000)');
+            setSP('--msger-private-bg', 'radial-gradient(#008080, #008080)');
+            setSP('--wb-bg', 'radial-gradient(#008080, #008080)');
             setSP('--navbar-bg', 'rgba(0, 0, 0, 0.2)');
             setSP('--select-bg', '#2c2c2c');
             setSP('--tab-btn-active', 'rgb(30 29 29)');
@@ -2124,8 +2124,8 @@ function setTheme() {
             setSP('--right-msg-bg', '#056162');
             setSP('--private-msg-bg', '#6b1226');
             setSP('--btn-bar-bg-color', '#FFFFFF');
-            setSP('--btn-bar-color', '#000000');
-            document.body.style.background = 'radial-gradient(#393939, #000000)';
+            setSP('--btn-bar-color', '#008080');
+            document.body.style.background = 'radial-gradient(#393939, #008080)';
             mirotalkTheme.selectedIndex = 0;
             break;
         case 'grey':
