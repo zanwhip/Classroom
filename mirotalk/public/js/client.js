@@ -629,15 +629,13 @@ let isPeerAuthEnabled = false; // Username and Password required in the URL para
 
 // survey
 let surveyActive = true; // when leaving the room give a feedback, if false will be redirected to newcall page
-let surveyURL = 'https://www.questionpro.com/t/AUs7VZq00L';
+let surveyURL = 'https://www.google.com';
 
 // Redirect on leave room
 let redirectActive = false;
-let redirectURL = '/newcall';
+let redirectURL = 'https://www.google.com/';
 
-/**
- * Load all Html elements by Id
- */
+
 function getHtmlElementsById() {
     mySessionTime = getId('mySessionTime');
     // My video elements
@@ -655,10 +653,7 @@ function getHtmlElementsById() {
     myAudioStatusIcon = getId('myAudioStatusIcon');
 }
 
-/**
- * Using tippy aka very nice tooltip!
- * https://atomiks.github.io/tippyjs/
- */
+
 function setButtonsToolTip() {
     // Not need for mobile
     if (isMobileDevice) return;
@@ -5163,11 +5158,11 @@ function shareRoomMeetingURL(checkScreen = false) {
         title: 'Share the room',
         html: `
         <div id="qrRoomContainer">
-            <canvas id="qrRoom"></canvas>
+            <canvas id="qrRoom" style={{ wisth : 20, height : 20 }}></canvas>
         </div>
         <br/>
         <p style="color:rgb(8, 189, 89);">Join from your mobile device</p>
-        <p style="background:transparent; color:white; font-family: Arial, Helvetica, sans-serif;">No need for apps, simply capture the QR code with your mobile camera Or Invite someone else to join by sending them the following URL</p>
+        <p style="background:transparent; color:white; font-family: Arial, Helvetica, sans-serif;"></p>
         <p style="color:rgb(8, 189, 89);">${roomURL}</p>`,
         showDenyButton: true,
         showCancelButton: true,
@@ -9357,15 +9352,15 @@ function leaveFeedback() {
         showDenyButton: true,
         background: swBg,
         imageUrl: images.feedback,
-        title: 'Leave a feedback',
-        text: 'Do you want to rate your MiroTalk experience?',
+        title: 'Give a feedback',
+        text: 'Do you want to rate our Website?',
         confirmButtonText: `Yes`,
         denyButtonText: `No`,
         showClass: { popup: 'animate__animated animate__fadeInDown' },
         hideClass: { popup: 'animate__animated animate__fadeOutUp' },
     }).then((result) => {
         if (result.isConfirmed) {
-            openURL(surveyURL);
+            openURL('https://www.google.com/')
         } else {
             redirectOnLeave();
         }
@@ -9373,7 +9368,7 @@ function leaveFeedback() {
 }
 
 function redirectOnLeave() {
-    redirectActive ? openURL(redirectURL) : openURL('/newcall');
+    redirectActive ? openURL(redirectURL) : openURL('https://www.google.com/');
 }
 
 /**
@@ -9385,7 +9380,7 @@ function dragElement(elmnt, dragObj) {
     let pos1 = 0,
         pos2 = 0,
         pos3 = 0,
-        pos4 = 0;
+        pos4 = 0;   
     if (dragObj) {
         // if present, the header is where you move the DIV from:
         dragObj.onmousedown = dragMouseDown;

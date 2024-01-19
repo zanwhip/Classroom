@@ -1,6 +1,7 @@
 'use strict';
 
 const langs = [
+    ['Tiếng Việt', ['vi-VN']],
     ['Afrikaans', ['af-ZA']],
     ['Bahasa Indonesia', ['id-ID']],
     ['Bahasa Melayu', ['ms-MY']],
