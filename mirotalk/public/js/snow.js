@@ -1,6 +1,6 @@
 'use-strict';
 
-// https://codepen.io/tutsplus/pen/BaVqjvg
+
 
 const snowContainer = document.getElementById('snow-container');
 
